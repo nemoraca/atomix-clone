@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace AtomixClone
 {
@@ -13,5 +7,11 @@ namespace AtomixClone
     /// </summary>
     public partial class App : Application
     {
+        public static ColourConverter ColourConverter { get; } = new ColourConverter();
+
+        public static T[] Ar<T>(params T[] ar)
+        {
+            return ar;
+        }
     }
 }
