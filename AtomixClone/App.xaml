@@ -68,6 +68,14 @@
             <GradientStop Color="DarkGreen" Offset="0.8" />
         </LinearGradientBrush>
 
+        <LinearGradientBrush x:Key="WallLevel2" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Gray" Offset="0" />
+            <GradientStop Color="LightCyan" Offset="0.2" />
+            <GradientStop Color="Gray" Offset="0.3" />
+            <GradientStop Color="LightCyan" Offset="0.7" />
+            <GradientStop Color="Gray" Offset="0.8" />
+        </LinearGradientBrush>
+
         <VisualBrush x:Key="BrushH">
             <VisualBrush.Visual>
                 <Border Width="40" Height="40">

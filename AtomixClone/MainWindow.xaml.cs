@@ -127,6 +127,35 @@ namespace AtomixClone
                     },
                     Solution = new byte[] {(byte)Atoms.C_w_n_e_s, (byte)Atoms.H_e, 0, (byte)Atoms.H_s, 0, (byte)Atoms.H_w, 0, (byte)Atoms.H_n},
                     SpiralCentre = new byte[] {3, 3}
+                },
+                new Level(
+                    new BoolArray(0b00000000, 0b00111100),
+                    new BoolArray(0b00000000, 0b00100100),
+                    new BoolArray(0b00000000, 0b00100100),
+                    new BoolArray(0b00000000, 0b00100100),
+                    new BoolArray(0b00011111, 0b11100100),
+                    new BoolArray(0b01110100, 0b01000100),
+                    new BoolArray(0b01000100, 0b00010100),
+                    new BoolArray(0b01000100, 0b00000100),
+                    new BoolArray(0b01010100, 0b11100100),
+                    new BoolArray(0b01000000, 0b00000100),
+                    new BoolArray(0b01010010, 0b00000100),
+                    new BoolArray(0b01010000, 0b11111100),
+                    new BoolArray(0b01111111, 0b10000000)
+                )
+                {
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.O_w_e, 8, 8},
+                        {(byte)Atoms.H_s, 3, 4},
+                        {(byte)Atoms.H_e, 8, 4},
+                        {(byte)Atoms.C_w_n_e_s, 7, 11},
+                        {(byte)Atoms.H_n, 10, 7},
+                        {(byte)Atoms.H_w, 10, 10},
+                        {(byte)Atoms.None, 1, 3}
+                    },
+                    Solution = new byte[] {(byte)Atoms.O_w_e, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s, 0, 0, (byte)Atoms.H_w, 0, 0, (byte)Atoms.H_n, 0, (byte)Atoms.H_e},
+                    SpiralCentre = new byte[] {3, 4}
                 }
             };
 

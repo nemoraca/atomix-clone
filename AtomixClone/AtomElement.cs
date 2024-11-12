@@ -27,17 +27,17 @@ namespace AtomixClone
                     brush = (Brush)Application.Current.Resources["BrushH"];
                     drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
                     break;
-                case Atoms.H_s:
+                case Atoms.H_n:
                     brush = (Brush)Application.Current.Resources["BrushH"];
-                    drawingContext.DrawLine(grayPen, centre, new Point(coord, MainWindow.TileWidthHeight));
+                    drawingContext.DrawLine(grayPen, centre, new Point(coord, 0));
                     break;
                 case Atoms.H_e:
                     brush = (Brush)Application.Current.Resources["BrushH"];
                     drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
                     break;
-                case Atoms.H_n:
+                case Atoms.H_s:
                     brush = (Brush)Application.Current.Resources["BrushH"];
-                    drawingContext.DrawLine(grayPen, centre, new Point(coord, 0));
+                    drawingContext.DrawLine(grayPen, centre, new Point(coord, MainWindow.TileWidthHeight));
                     break;
                 case Atoms.O_w_e:
                     brush = (Brush)Application.Current.Resources["BrushO"];
