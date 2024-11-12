@@ -96,6 +96,20 @@
             </VisualBrush.Visual>
         </VisualBrush>
 
+        <VisualBrush x:Key="BrushC">
+            <VisualBrush.Visual>
+                <Border Width="40" Height="40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="LightGray" Offset="0" />
+                            <GradientStop Color="Black" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Text="C" />
+                </Border>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
         <Style x:Key="StackPanelStyle" TargetType="{x:Type StackPanel}">
             <Setter Property="Orientation" Value="Horizontal" />
             <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource Self}, Path=Parent.Parent.Width, Mode=OneTime}" />
