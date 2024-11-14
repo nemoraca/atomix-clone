@@ -249,67 +249,67 @@
 
             <StackPanel Width="427" Height="427" Background="Black" Margin="1036,0,0,0">
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_0_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_0_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_0_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_0_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_1_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_1_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_1_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_1_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_2_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_2_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_2_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_2_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_3_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_3_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_3_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_3_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_4_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_4_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_4_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_4_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_5_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_5_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_5_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_5_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
-                    <Border Name="border_6_0" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_1" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_2" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_3" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_4" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_5" Style="{StaticResource BorderStyle}" />
-                    <Border Name="border_6_6" Style="{StaticResource BorderStyle}" />
+                    <Border Name="border_6_0" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_1" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_2" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_3" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_4" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_5" Style="{StaticResource InfoBorderStyle}" />
+                    <Border Name="border_6_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
             </StackPanel>
         </Grid>

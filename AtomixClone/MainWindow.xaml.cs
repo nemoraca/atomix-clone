@@ -28,6 +28,7 @@ namespace AtomixClone
         private Border[,] Tiles { get; }
         private byte[,] TileContents { get; }
         private Border[,] InfoTiles { get; }
+        private Array LevelWallMapping { get; }
         private CircularArray<Direction> CircularArray { get; }
         private Ellipse SelectionCircle { get; }
         private Brush[] SelectionCircleColours { get; }
@@ -93,8 +94,8 @@ namespace AtomixClone
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.O_w_e, 7, 11},
-                        {(byte)Atoms.H_w, 3, 6},
                         {(byte)Atoms.H_e, 8, 6},
+                        {(byte)Atoms.H_w, 3, 6},
                         {(byte)Atoms.None, 2, 4}
                     },
                     Solution = new byte[] {(byte)Atoms.O_w_e, (byte)Atoms.H_e, 0, 0, 0, (byte)Atoms.H_w},
@@ -119,10 +120,10 @@ namespace AtomixClone
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.C_w_n_e_s, 5, 6},
-                        {(byte)Atoms.H_s, 5, 10},
                         {(byte)Atoms.H_e, 6, 3},
-                        {(byte)Atoms.H_n, 10, 4},
+                        {(byte)Atoms.H_s, 5, 10},
                         {(byte)Atoms.H_w, 9, 9},
+                        {(byte)Atoms.H_n, 10, 4},
                         {(byte)Atoms.None, 2, 2}
                     },
                     Solution = new byte[] {(byte)Atoms.C_w_n_e_s, (byte)Atoms.H_e, 0, (byte)Atoms.H_s, 0, (byte)Atoms.H_w, 0, (byte)Atoms.H_n},
@@ -147,15 +148,44 @@ namespace AtomixClone
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.O_w_e, 8, 8},
-                        {(byte)Atoms.H_s, 3, 4},
-                        {(byte)Atoms.H_e, 8, 4},
                         {(byte)Atoms.C_w_n_e_s, 7, 11},
-                        {(byte)Atoms.H_n, 10, 7},
+                        {(byte)Atoms.H_s, 3, 4},
                         {(byte)Atoms.H_w, 10, 10},
+                        {(byte)Atoms.H_n, 10, 7},
+                        {(byte)Atoms.H_e, 8, 4},
                         {(byte)Atoms.None, 1, 3}
                     },
                     Solution = new byte[] {(byte)Atoms.O_w_e, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s, 0, 0, (byte)Atoms.H_w, 0, 0, (byte)Atoms.H_n, 0, (byte)Atoms.H_e},
                     SpiralCentre = new byte[] {3, 4}
+                },
+                new Level(
+                    new BoolArray(0b00000011, 0b11111000),
+                    new BoolArray(0b00000010, 0b00101000),
+                    new BoolArray(0b00000010, 0b10101000),
+                    new BoolArray(0b00000010, 0b00101000),
+                    new BoolArray(0b00000010, 0b00101000),
+                    new BoolArray(0b00111111, 0b10001000),
+                    new BoolArray(0b00100000, 0b00001000),
+                    new BoolArray(0b00100000, 0b11001000),
+                    new BoolArray(0b00111100, 0b00001000),
+                    new BoolArray(0b00100000, 0b10011000),
+                    new BoolArray(0b00100010, 0b10001000),
+                    new BoolArray(0b00111000, 0b10001000),
+                    new BoolArray(0b00001111, 0b11111000)
+                )
+                {
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.C_w_w_ne_se, 7, 5},
+                        {(byte)Atoms.C_nw_e_e_sw, 7, 8},
+                        {(byte)Atoms.H_sw, 7, 10},
+                        {(byte)Atoms.H_nw, 11, 6},
+                        {(byte)Atoms.H_ne, 2, 6},
+                        {(byte)Atoms.H_se, 9, 8},
+                        {(byte)Atoms.None, 1, 4}
+                    },
+                    Solution = new byte[] {(byte)Atoms.C_w_w_ne_se, (byte)Atoms.C_nw_e_e_sw, 0, 0, (byte)Atoms.H_sw, 0, (byte)Atoms.H_nw, 0, 0, (byte)Atoms.H_ne, 0, (byte)Atoms.H_se},
+                    SpiralCentre = new byte[] {3, 3}
                 }
             };
 
@@ -185,6 +215,7 @@ namespace AtomixClone
             // We shall use this circular array to detect long pressed arrow keys.
             CircularArray = new CircularArray<Direction>(3);
             SelectionCircle = (Ellipse)App.Current.Resources["SelectionCircle"];
+            LevelWallMapping = (Array)App.Current.Resources["LevelWallMapping"];
         }
 
         private void Rendering(object sender, EventArgs args)
@@ -506,7 +537,7 @@ namespace AtomixClone
             NextMoves.Clear();
             CircularArray.Clear();
 
-            App.Current.Resources["WallLevel"] = App.Current.Resources[string.Format("WallLevel{0}", CurrentLevel)];
+            App.Current.Resources["WallLevel"] = App.Current.Resources[string.Format("WallLevel{0}", LevelWallMapping.GetValue(CurrentLevel))];
 
             for (byte i = 0; i < Tiles.GetLength(0); ++i)
                 for (byte j = 0; j < Tiles.GetLength(1); ++j)
@@ -523,6 +554,7 @@ namespace AtomixClone
                 {
                     Width = TileWidthHeight,
                     Height = TileWidthHeight,
+                    ClipToBounds = true,
                     // Tag must be initialised with a double value. If not, binding in AtomBorderStyle will not work.
                     Tag = TileWidthHeight * level.AtomPositions[i, 1],
                     Child = new Grid()
