@@ -247,7 +247,10 @@
                 </StackPanel>
             </Canvas>
 
-            <StackPanel Width="427" Height="427" Background="Black" Margin="1036,0,0,0">
+            <StackPanel Width="427" Height="549" Background="Black" Margin="1036,0,0,0">
+                <Border Width="427" Height="{x:Static root:MainWindow.TileWidthHeight}" Background="DarkBlue">
+                    <TextBlock Name="moleculeUp"  FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
                 <StackPanel Style="{StaticResource StackPanelStyle}">
                     <Border Name="border_0_0" Style="{StaticResource InfoBorderStyle}" />
                     <Border Name="border_0_1" Style="{StaticResource InfoBorderStyle}" />
@@ -311,6 +314,9 @@
                     <Border Name="border_6_5" Style="{StaticResource InfoBorderStyle}" />
                     <Border Name="border_6_6" Style="{StaticResource InfoBorderStyle}" />
                 </StackPanel>
+                <Border Width="427" Height="{x:Static root:MainWindow.TileWidthHeight}" Background="DarkBlue">
+                    <TextBlock Name="moleculeDown" FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
             </StackPanel>
         </Grid>
 

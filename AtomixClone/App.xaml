@@ -6,6 +6,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Ellipse x:Key="SelectionCircle" Width="44" Height="44" Fill="Transparent" StrokeThickness="5" />
+        <Rectangle x:Key="SelectionRect" Width="61" Height="61" RadiusX="10" RadiusY="10" Fill="Transparent" StrokeThickness="5" />
 
         <Color x:Key="BlackColour">Black</Color>
 
@@ -82,6 +83,8 @@
             <sys:Byte>1</sys:Byte>
             <sys:Byte>2</sys:Byte>
             <sys:Byte>0</sys:Byte>
+            <sys:Byte>1</sys:Byte>
+            <sys:Byte>2</sys:Byte>
         </x:Array>
 
         <VisualBrush x:Key="BrushH">
@@ -125,6 +128,47 @@
                 </Border>
             </VisualBrush.Visual>
         </VisualBrush>
+
+        <ImageBrush x:Key="Bottle0">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle0.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle1">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle1.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle2">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle2.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle3">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle3.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle4">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle4.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle5">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle5.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle6">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle6.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+        <ImageBrush x:Key="Bottle7">
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="Images\bottle7.bmp" />
+            </ImageBrush.ImageSource>
+        </ImageBrush>
 
         <Style x:Key="StackPanelStyle" TargetType="{x:Type StackPanel}">
             <Setter Property="Orientation" Value="Horizontal" />

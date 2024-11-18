@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
 using System.Windows.Forms.Integration;
+using System.Windows.Media.Imaging;
 
 namespace AtomixClone
 {
@@ -30,7 +31,7 @@ namespace AtomixClone
         private Border[,] InfoTiles { get; }
         private Array LevelWallMapping { get; }
         private CircularArray<Direction> CircularArray { get; }
-        private Ellipse SelectionCircle { get; }
+        private Shape SelectionOutline { get; set; }
         private Brush[] SelectionCircleColours { get; }
         private byte AnimatedByte { get; set; }
         private byte AnimatedCircleColour { get; set; }
@@ -91,6 +92,8 @@ namespace AtomixClone
                     new BoolArray(0b00000000, 0b00000000)
                 )
                 {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "WATER",
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.O_w_e, 7, 11},
@@ -117,6 +120,8 @@ namespace AtomixClone
                     new BoolArray(0b00000000, 0b00000000)
                 )
                 {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "METHANE",
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.C_w_n_e_s, 5, 6},
@@ -145,6 +150,8 @@ namespace AtomixClone
                     new BoolArray(0b01111111, 0b10000000)
                 )
                 {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "MATHANOL",
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.O_w_e, 8, 8},
@@ -174,6 +181,8 @@ namespace AtomixClone
                     new BoolArray(0b00001111, 0b11111000)
                 )
                 {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "ETHENE",
                     AtomPositions = new byte[,]
                     {
                         {(byte)Atoms.C_w_w_ne_se, 7, 5},
@@ -186,7 +195,74 @@ namespace AtomixClone
                     },
                     Solution = new byte[] {(byte)Atoms.C_w_w_ne_se, (byte)Atoms.C_nw_e_e_sw, 0, 0, (byte)Atoms.H_sw, 0, (byte)Atoms.H_nw, 0, 0, (byte)Atoms.H_ne, 0, (byte)Atoms.H_se},
                     SpiralCentre = new byte[] {3, 3}
-                }
+                },
+                new Level(
+                    new BoolArray(0b00000111, 0b10000000),
+                    new BoolArray(0b00000100, 0b11111000),
+                    new BoolArray(0b00000100, 0b00001000),
+                    new BoolArray(0b01111111, 0b10001000),
+                    new BoolArray(0b01000100, 0b00001000),
+                    new BoolArray(0b01000110, 0b01111000),
+                    new BoolArray(0b01000100, 0b01001110),
+                    new BoolArray(0b01000000, 0b01000010),
+                    new BoolArray(0b01111111, 0b01001010),
+                    new BoolArray(0b01000000, 0b00000010),
+                    new BoolArray(0b01001100, 0b00100010),
+                    new BoolArray(0b01000000, 0b00100010),
+                    new BoolArray(0b01111111, 0b11111110)
+                )
+                {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "PROPENE",
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.C_w_n_e_e, 4, 4},
+                        {(byte)Atoms.C_w_n_e_s, 6, 9},
+                        {(byte)Atoms.H_s, 3, 6},
+                        {(byte)Atoms.H_s, 7, 11},
+                        {(byte)Atoms.C_w_w_ne_se, 5, 12},
+                        {(byte)Atoms.H_n, 11, 10},
+                        {(byte)Atoms.H_e, 6, 4},
+                        {(byte)Atoms.H_sw, 2, 9},
+                        {(byte)Atoms.H_nw, 11, 2},
+                        {(byte)Atoms.None, 1, 8}
+                    },
+                    Solution = new byte[] {(byte)Atoms.C_w_n_e_e, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s, (byte)Atoms.H_s, 0, (byte)Atoms.C_w_w_ne_se, 0, 0,
+                        (byte)Atoms.H_n, 0, (byte)Atoms.H_e, 0, 0, 0, 0, 0, 0, (byte)Atoms.H_sw, 0, (byte)Atoms.H_nw},
+                    SpiralCentre = new byte[] {3, 3}
+                },
+                new Level(
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000111, 0b11100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000111, 0b11100000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000)
+                )
+                {
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.Bottle4, 6, 9},
+                        {(byte)Atoms.Bottle3, 4, 7},
+                        {(byte)Atoms.Bottle0, 6, 6},
+                        {(byte)Atoms.Bottle1, 4, 9},
+                        {(byte)Atoms.Bottle2, 7, 8},
+                        {(byte)Atoms.Bottle5, 7, 6},
+                        {(byte)Atoms.Bottle7, 5, 8},
+                        {(byte)Atoms.Bottle6, 5, 7},
+                        {(byte)Atoms.None, 4, 6}
+                    },
+                    Solution = new byte[] {(byte)Atoms.Bottle4, (byte)Atoms.Bottle3, (byte)Atoms.Bottle0, (byte)Atoms.Bottle1,
+                        (byte)Atoms.Bottle2, (byte)Atoms.Bottle5, 0, (byte)Atoms.Bottle7, (byte)Atoms.Bottle6},
+                    SpiralCentre = new byte[] {3, 3}
+                },
             };
 
             SelectionCircleColours = new Brush[]
@@ -214,7 +290,6 @@ namespace AtomixClone
             NextMoves = new Queue<Direction>(2);
             // We shall use this circular array to detect long pressed arrow keys.
             CircularArray = new CircularArray<Direction>(3);
-            SelectionCircle = (Ellipse)App.Current.Resources["SelectionCircle"];
             LevelWallMapping = (Array)App.Current.Resources["LevelWallMapping"];
         }
 
@@ -238,7 +313,7 @@ namespace AtomixClone
             if (AnimatedCircleColour != b)
             {
                 AnimatedCircleColour = b;
-                SelectionCircle.Stroke = SelectionCircleColours[AnimatedCircleColour];
+                SelectionOutline.Stroke = SelectionCircleColours[AnimatedCircleColour];
             }
         }
 
@@ -432,7 +507,7 @@ namespace AtomixClone
             ((Grid)ChildSelectedElement).Children.RemoveAt(1);
             Selected = 255;
             await Task.Delay(500);
-            DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2.4) };
+            DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1.2) };
             timer.Tick += (object s, EventArgs e) =>
             {
                 gameCanvas.Children.RemoveAt(1);
@@ -459,7 +534,7 @@ namespace AtomixClone
             Grid g;
             b = (Border)gameCanvas.Children[1];
             g = (Grid)b.Child;
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("AtomixClone.finale.gif");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("AtomixClone.Images.finale.gif");
             System.Drawing.Image gifImage = System.Drawing.Image.FromStream(stream);
             g.Children.RemoveAt(0);
             g.Children.Add(new WindowsFormsHost()
@@ -500,6 +575,8 @@ namespace AtomixClone
 
         private void ClearLevel()
         {
+            moleculeUp.ClearValue(TextBlock.TextProperty);
+            moleculeDown.ClearValue(TextBlock.TextProperty);
             Level level = Levels[CurrentLevel - 1];
             ((IList)TileContents).Clear();
             for (byte i = 0; i < Tiles.GetLength(0); ++i)
@@ -529,6 +606,18 @@ namespace AtomixClone
         {
             Level level = Levels[CurrentLevel];
             NumberOfAtoms = (byte)(level.AtomPositions.GetLength(0) - 1);
+            if (!string.IsNullOrEmpty(level.MoleculeUp))
+            {
+                moleculeUp.Text = level.MoleculeUp;
+                moleculeDown.Text = level.MoleculeDown;
+                SelectionOutline = (Ellipse)App.Current.Resources["SelectionCircle"];
+            }
+            else
+            {
+                moleculeUp.Text = "BONUS";
+                moleculeDown.Text = "STAGE";
+                SelectionOutline = (Rectangle)App.Current.Resources["SelectionRect"];
+            }
 
             AnimatedByte = 255;
             AnimatedCircleColour = 255; // 255 means that no colour is selected.
@@ -629,7 +718,7 @@ namespace AtomixClone
                     SelectedElement = (FrameworkElement)gameCanvas.Children[Selected];
                     ChildSelectedElement = ((Border)SelectedElement).Child as FrameworkElement;
                     ((Border)BoxElement).BorderBrush = Brushes.Transparent;
-                    ((Grid)ChildSelectedElement).Children.Add(SelectionCircle);
+                    ((Grid)ChildSelectedElement).Children.Add(SelectionOutline);
                 }
 
                 return;

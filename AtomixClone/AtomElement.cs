@@ -20,6 +20,7 @@ namespace AtomixClone
             byte coord = (byte)(MainWindow.TileWidthHeight / 2);
             Point centre = new Point(coord, coord);
             Pen grayPen = (Pen)Application.Current.Resources["GrayPen"];
+            Pen transparentPen = (Pen)Application.Current.Resources["TransparentPen"];
 
             switch (Atom)
             {
@@ -78,12 +79,22 @@ namespace AtomixClone
                     drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(0, coord - 5));
                     drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(0, coord + 5));
                     break;
+                case Atoms.C_w_n_e_e:
+                    brush = (Brush)Application.Current.Resources["BrushC"];
+                    drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
+                    drawingContext.DrawLine(grayPen, centre, new Point(coord, 0));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(MainWindow.TileWidthHeight, coord - 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(MainWindow.TileWidthHeight, coord + 5));
+                    break;
                 default:
-                    brush = null;
+                    brush = (Brush)App.Current.Resources[Atom.ToString()];
                     break;
             }
 
-            drawingContext.DrawEllipse(brush, (Pen)Application.Current.Resources["TransparentPen"], centre, coord * 2 / 3, coord * 2 / 3);
+            if (brush is ImageBrush)
+                drawingContext.DrawRectangle(brush, transparentPen, new Rect(0, 0, MainWindow.TileWidthHeight, MainWindow.TileWidthHeight));
+            else
+                drawingContext.DrawEllipse(brush, transparentPen, centre, coord * 2 / 3, coord * 2 / 3);
         }
     }
 }

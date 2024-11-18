@@ -4,7 +4,11 @@ namespace AtomixClone
 {
     public class Level
     {
-        public BoolArray[] Tiles { get; set; }
+        public BoolArray[] Tiles { get; }
+
+        public string MoleculeUp { get; set; }
+
+        public string MoleculeDown { get; set; }
 
         public byte[,] AtomPositions { get; set; }      // First atom plays special role in checking the solution.
 

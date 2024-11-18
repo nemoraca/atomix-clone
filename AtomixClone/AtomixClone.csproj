@@ -105,7 +105,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="finale.gif" />
+    <Resource Include="Images\bottle1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle0.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle7.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\finale.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
