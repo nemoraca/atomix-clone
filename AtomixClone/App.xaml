@@ -78,6 +78,14 @@
             <GradientStop Color="Gray" Offset="0.8" />
         </LinearGradientBrush>
 
+        <LinearGradientBrush x:Key="WallLevel3" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Blue" Offset="0" />
+            <GradientStop Color="LightCyan" Offset="0.2" />
+            <GradientStop Color="Blue" Offset="0.3" />
+            <GradientStop Color="LightCyan" Offset="0.7" />
+            <GradientStop Color="Blue" Offset="0.8" />
+        </LinearGradientBrush>
+
         <x:Array x:Key="LevelWallMapping" Type="sys:Byte">
             <sys:Byte>0</sys:Byte>
             <sys:Byte>1</sys:Byte>
@@ -85,6 +93,9 @@
             <sys:Byte>0</sys:Byte>
             <sys:Byte>1</sys:Byte>
             <sys:Byte>2</sys:Byte>
+            <sys:Byte>0</sys:Byte>
+            <sys:Byte>3</sys:Byte>
+            <sys:Byte>0</sys:Byte>
         </x:Array>
 
         <VisualBrush x:Key="BrushH">

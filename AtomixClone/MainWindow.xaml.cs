@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
 using System.Windows.Forms.Integration;
-using System.Windows.Media.Imaging;
 
 namespace AtomixClone
 {
@@ -263,6 +262,112 @@ namespace AtomixClone
                         (byte)Atoms.Bottle2, (byte)Atoms.Bottle5, 0, (byte)Atoms.Bottle7, (byte)Atoms.Bottle6},
                     SpiralCentre = new byte[] {3, 3}
                 },
+                new Level(
+                    new BoolArray(0b00011111, 0b11111100),
+                    new BoolArray(0b00010000, 0b00000100),
+                    new BoolArray(0b00010001, 0b00110100),
+                    new BoolArray(0b00010010, 0b00000100),
+                    new BoolArray(0b00010010, 0b01000100),
+                    new BoolArray(0b00010010, 0b01010100),
+                    new BoolArray(0b01111000, 0b00000100),
+                    new BoolArray(0b01000010, 0b01111100),
+                    new BoolArray(0b01001010, 0b00001000),
+                    new BoolArray(0b01000000, 0b01101100),
+                    new BoolArray(0b01111100, 0b00000100),
+                    new BoolArray(0b00000101, 0b00000100),
+                    new BoolArray(0b00000111, 0b11111100)
+                )
+                {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "ETHANOL",
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.O_w_e, 8, 7},
+                        {(byte)Atoms.C_w_n_e_s, 3, 8},
+                        {(byte)Atoms.H_s, 1, 5},
+                        {(byte)Atoms.H_w, 5, 5},
+                        {(byte)Atoms.H_n, 10, 8},
+                        {(byte)Atoms.H_n, 11, 6},
+                        {(byte)Atoms.C_w_n_e_s, 5, 10},
+                        {(byte)Atoms.H_s, 9, 11},
+                        {(byte)Atoms.H_e, 9, 4},
+                        {(byte)Atoms.None, 1, 3}
+                    },
+                    Solution = new byte[] {(byte)Atoms.O_w_e, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s, 0, 0, (byte)Atoms.H_w, 0, 0, (byte)Atoms.H_n,
+                        (byte)Atoms.H_n, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, (byte)Atoms.H_e},
+                    SpiralCentre = new byte[] {3, 4}
+                },
+                new Level(
+                    new BoolArray(0b00011111, 0b11111100),
+                    new BoolArray(0b00010001, 0b00000100),
+                    new BoolArray(0b00010001, 0b00000100),
+                    new BoolArray(0b00010000, 0b00100100),
+                    new BoolArray(0b00110111, 0b10100100),
+                    new BoolArray(0b00100100, 0b10100100),
+                    new BoolArray(0b00100100, 0b00110100),
+                    new BoolArray(0b00100100, 0b00000100),
+                    new BoolArray(0b00100110, 0b00100100),
+                    new BoolArray(0b00100000, 0b01100100),
+                    new BoolArray(0b00111000, 0b01000100),
+                    new BoolArray(0b00100010, 0b01000100),
+                    new BoolArray(0b00111111, 0b11111100)
+                )
+                {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "PROPANOL",
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.O_n_s, 3, 8},
+                        {(byte)Atoms.H_n, 4, 6},
+                        {(byte)Atoms.C_w_n_e_s, 5, 11},
+                        {(byte)Atoms.C_w_n_e_s, 8, 4},
+                        {(byte)Atoms.C_w_n_e_s, 10, 9},
+                        {(byte)Atoms.H_n, 5, 9},
+                        {(byte)Atoms.H_n, 9, 9},
+                        {(byte)Atoms.H_e, 10, 5},
+                        {(byte)Atoms.H_s, 1, 10},
+                        {(byte)Atoms.H_s, 4, 4},
+                        {(byte)Atoms.H_s, 7, 11},
+                        {(byte)Atoms.H_w, 9, 11},
+                        {(byte)Atoms.None, 1, 3}
+                    },
+                    Solution = new byte[] {(byte)Atoms.O_n_s, (byte)Atoms.H_n, (byte)Atoms.C_w_n_e_s, (byte)Atoms.C_w_n_e_s, (byte)Atoms.C_w_n_e_s,
+                        (byte)Atoms.H_n, 0, (byte)Atoms.H_n, 0, 0, 0, (byte)Atoms.H_e, 0, (byte)Atoms.H_s, (byte)Atoms.H_s, (byte)Atoms.H_s, 0, (byte)Atoms.H_w},
+                    SpiralCentre = new byte[] {4, 3}
+                },
+                new Level(
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00011111, 0b11111000),
+                    new BoolArray(0b00010000, 0b00001000),
+                    new BoolArray(0b00010101, 0b11001000),
+                    new BoolArray(0b00010100, 0b00001000),
+                    new BoolArray(0b00010000, 0b01101000),
+                    new BoolArray(0b00010100, 0b00001000),
+                    new BoolArray(0b00010101, 0b11101000),
+                    new BoolArray(0b00010000, 0b00001000),
+                    new BoolArray(0b00011111, 0b00101000),
+                    new BoolArray(0b00000001, 0b00101000),
+                    new BoolArray(0b00000001, 0b11111000),
+                    new BoolArray(0b00000000, 0b00000000)
+                )
+                {
+                    MoleculeUp = "MOLECULE",
+                    MoleculeDown = "ETHANAL",
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.C_w_n_e_e, 8, 7},
+                        {(byte)Atoms.C_w_n_e_s, 5, 9},
+                        {(byte)Atoms.H_s, 4, 9},
+                        {(byte)Atoms.H_s, 6, 11},
+                        {(byte)Atoms.O_w_w, 2, 10},
+                        {(byte)Atoms.H_n, 6, 8},
+                        {(byte)Atoms.H_e, 6, 5},
+                        {(byte)Atoms.None, 2, 4}
+                    },
+                    Solution = new byte[] {(byte)Atoms.C_w_n_e_e, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s,
+                        (byte)Atoms.H_s, 0, (byte)Atoms.O_w_w, 0, 0, (byte)Atoms.H_n, 0, (byte)Atoms.H_e},
+                    SpiralCentre = new byte[] {3, 4}
+                }
             };
 
             SelectionCircleColours = new Brush[]
