@@ -11,8 +11,8 @@
         <Color x:Key="BlackColour">Black</Color>
 
         <Pen x:Key="TransparentPen" Brush="Transparent" Thickness="1" />
-
-        <Pen x:Key="GrayPen" Brush="Gray" Thickness="7" />
+        <Pen x:Key="BlackPen" Brush="Black" Thickness="2" />
+        <Pen x:Key="LightGrayPen" Brush="LightGray" Thickness="7" />
 
         <LinearGradientBrush x:Key="Gradient0" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="Brown" Offset="0" />
@@ -96,7 +96,20 @@
             <sys:Byte>0</sys:Byte>
             <sys:Byte>3</sys:Byte>
             <sys:Byte>0</sys:Byte>
+            <sys:Byte>2</sys:Byte>
+            <sys:Byte>3</sys:Byte>
+            <sys:Byte>1</sys:Byte>
+            <sys:Byte>0</sys:Byte>
+            <sys:Byte>1</sys:Byte>
+            <sys:Byte>0</sys:Byte>
+            <sys:Byte>3</sys:Byte>
+            <sys:Byte>2</sys:Byte>
         </x:Array>
+
+        <LinearGradientBrush x:Key="BrushNone" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="LightBlue" Offset="0" />
+            <GradientStop Color="DarkBlue" Offset="1" />
+        </LinearGradientBrush>
 
         <VisualBrush x:Key="BrushH">
             <VisualBrush.Visual>
