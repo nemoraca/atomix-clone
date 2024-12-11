@@ -656,6 +656,38 @@ namespace AtomixClone
                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, (byte)Atoms.H_n, (byte)Atoms.C_w_n_e_s, (byte)Atoms.H_s,
                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, (byte)Atoms.H_e},
                     SpiralCentre = new byte[] {4, 4}
+                },
+                new Level(
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000111, 0b11100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000100, 0b00100000),
+                    new BoolArray(0b00000111, 0b11100000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000),
+                    new BoolArray(0b00000000, 0b00000000)
+                )
+                {
+                    AtomPositions = new byte[,]
+                    {
+                        {(byte)Atoms.Bottle4, 6, 9},
+                        {(byte)Atoms.Bottle3, 7, 6},
+                        {(byte)Atoms.Bottle0, 7, 9},
+                        {(byte)Atoms.Bottle1, 5, 6},
+                        {(byte)Atoms.Bottle2, 4, 8},
+                        {(byte)Atoms.Bottle5, 5, 8},
+                        {(byte)Atoms.Bottle7, 4, 6},
+                        {(byte)Atoms.Bottle6, 7, 7},
+                        {(byte)Atoms.None, 4, 6}
+                    },
+                    Solution = new byte[] {(byte)Atoms.Bottle4, (byte)Atoms.Bottle3, (byte)Atoms.Bottle0, (byte)Atoms.Bottle1,
+                        (byte)Atoms.Bottle2, (byte)Atoms.Bottle5, 0, (byte)Atoms.Bottle7, (byte)Atoms.Bottle6},
+                    SpiralCentre = new byte[] {3, 3}
                 }
             };
 
@@ -1083,7 +1115,7 @@ namespace AtomixClone
 
             byte key = (byte)args.Key;
 
-            if (args.Key == Key.Enter || args.Key == Key.Return)
+            if (args.Key == Key.Space || args.Key == Key.Enter || args.Key == Key.Return)
             {
                 if (Moving != Direction.None) return;
 
