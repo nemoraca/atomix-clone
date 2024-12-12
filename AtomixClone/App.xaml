@@ -105,6 +105,8 @@
             <sys:Byte>3</sys:Byte>
             <sys:Byte>1</sys:Byte>
             <sys:Byte>2</sys:Byte>
+            <sys:Byte>3</sys:Byte>
+            <sys:Byte>0</sys:Byte>
         </x:Array>
 
         <LinearGradientBrush x:Key="BrushNone" StartPoint="0,0" EndPoint="1,1">
