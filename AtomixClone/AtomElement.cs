@@ -72,6 +72,11 @@ namespace AtomixClone
                     drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(0, coord - 5));
                     drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(0, coord + 5));
                     break;
+                case Atoms.O_e_e:
+                    brush = (Brush)Application.Current.Resources["BrushO"];
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(MainWindow.TileWidthHeight, coord - 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(MainWindow.TileWidthHeight, coord + 5));
+                    break;
                 case Atoms.O_n_n:
                     brush = (Brush)Application.Current.Resources["BrushO"];
                     drawingContext.DrawLine(grayPen, new Point(coord - 5, coord), new Point(coord - 5, 0));
@@ -134,6 +139,26 @@ namespace AtomixClone
                     drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, 0));
                     drawingContext.DrawLine(grayPen, centre, new Point(coord, MainWindow.TileWidthHeight));
                     break;
+                case Atoms.C_w_w_e_s:
+                    brush = (Brush)Application.Current.Resources["BrushC"];
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(0, coord - 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(0, coord + 5));
+                    drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
+                    drawingContext.DrawLine(grayPen, centre, new Point(coord, MainWindow.TileWidthHeight));
+                    break;
+                case Atoms.C_w_e_e_s:
+                    brush = (Brush)Application.Current.Resources["BrushC"];
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(MainWindow.TileWidthHeight, coord - 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(MainWindow.TileWidthHeight, coord + 5));
+                    drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
+                    drawingContext.DrawLine(grayPen, centre, new Point(coord, MainWindow.TileWidthHeight));
+                    break;
+                case Atoms.C_n_e_e_s:
+                    brush = (Brush)Application.Current.Resources["BrushC"];
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord - 5), new Point(MainWindow.TileWidthHeight, coord - 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(MainWindow.TileWidthHeight, coord + 5));
+                    drawingContext.DrawLine(grayPen, new Point(coord, 0), new Point(coord, MainWindow.TileWidthHeight));
+                    break;
                 case Atoms.L_1:
                     brush = (Brush)Application.Current.Resources["BrushNone"];
                     drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
@@ -156,7 +181,7 @@ namespace AtomixClone
                     break;
                 case Atoms.T_w:
                     brush = (Brush)Application.Current.Resources["BrushNone"];
-                    drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
+                    drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
                     drawingContext.DrawLine(grayPen, new Point(coord, 0), new Point(coord, MainWindow.TileWidthHeight));
                     break;
                 case Atoms.T_n:
@@ -166,7 +191,7 @@ namespace AtomixClone
                     break;
                 case Atoms.T_e:
                     brush = (Brush)Application.Current.Resources["BrushNone"];
-                    drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
+                    drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
                     drawingContext.DrawLine(grayPen, new Point(coord, 0), new Point(coord, MainWindow.TileWidthHeight));
                     break;
                 case Atoms.T_s:
