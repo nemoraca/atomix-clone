@@ -111,6 +111,10 @@
             <sys:Byte>3</sys:Byte>
             <sys:Byte>1</sys:Byte>
             <sys:Byte>2</sys:Byte>
+            <sys:Byte>3</sys:Byte>
+            <sys:Byte>1</sys:Byte>
+            <sys:Byte>0</sys:Byte>
+            <sys:Byte>2</sys:Byte>
         </x:Array>
 
         <LinearGradientBrush x:Key="BrushNone" StartPoint="0,0" EndPoint="1,1">
@@ -156,6 +160,20 @@
                         </LinearGradientBrush>
                     </Border.Background>
                     <TextBlock FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Text="C" />
+                </Border>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+        <VisualBrush x:Key="BrushN">
+            <VisualBrush.Visual>
+                <Border Width="40" Height="40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="LightGreen" Offset="0" />
+                            <GradientStop Color="DarkGreen" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Text="N" />
                 </Border>
             </VisualBrush.Visual>
         </VisualBrush>

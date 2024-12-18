@@ -159,6 +159,12 @@ namespace AtomixClone
                     drawingContext.DrawLine(grayPen, new Point(coord, coord + 5), new Point(MainWindow.TileWidthHeight, coord + 5));
                     drawingContext.DrawLine(grayPen, new Point(coord, 0), new Point(coord, MainWindow.TileWidthHeight));
                     break;
+                case Atoms.N_w_ne_se:
+                    brush = (Brush)Application.Current.Resources["BrushN"];
+                    drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, 0));
+                    drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, MainWindow.TileWidthHeight));
+                    drawingContext.DrawLine(grayPen, centre, new Point(0, coord));
+                    break;
                 case Atoms.L_1:
                     brush = (Brush)Application.Current.Resources["BrushNone"];
                     drawingContext.DrawLine(grayPen, centre, new Point(MainWindow.TileWidthHeight, coord));
